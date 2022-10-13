@@ -71,6 +71,9 @@ br.clear {
   clear: both;
   line-height: 0;
 }
+::placeholder {
+  color: #000;
+}
 
 @font-face {
   font-family: "Poppins";
