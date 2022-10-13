@@ -327,7 +327,34 @@ function Spotlight() {
                             </RightCategories>
                         </MiddleCategories>
                     </MiddleContainer>
-                    <RightContainer></RightContainer>
+                    <RightContainer>
+                        <BillSection>
+                            <HeadingBill>Bills</HeadingBill>
+                            <HeadingOrder>Order #3243</HeadingOrder>
+                        </BillSection>
+                        <SectionDelivery>
+                            <Delivery>
+                                <Item>Dine in</Item>
+                                <Item>Take Away</Item>
+                                <Item>Delivery</Item>
+                            </Delivery>
+                        </SectionDelivery>
+                        <CartSection>
+                            <PriceSection>
+                                <CartImage>
+                                    <PeruBeansImage
+                                        src={require("../Assets/images/frame6.jpg")}
+                                        alt="Frame"
+                                    />
+                                </CartImage>
+                                <AddCart>
+                                    <PeruBeansHeading>Peru Beans</PeruBeansHeading>
+                                    <PriceHeading>Beans= 75%+250g</PriceHeading>
+                                    
+                                </AddCart>
+                            </PriceSection>
+                        </CartSection>
+                    </RightContainer>
                 </MainContainer>
             </SpotlightContainer>
         </>
@@ -344,10 +371,10 @@ const SpotlightContainer = styled.div`
 `;
 const MainContainer = styled.div`
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 `;
 const LeftContainer = styled.div`
-    width: 10%;
+    width: 7%;
 `;
 const IconMenu = styled.div`
     width: 40px;
@@ -408,7 +435,7 @@ const SettingsImage = styled.img`
 // middle start
 
 const MiddleContainer = styled.div`
-    width: 80%;
+    width: 60%;
 `;
 const MiddleMenuIcons = styled.div`
     display: flex;
@@ -459,7 +486,7 @@ const MiddleCategories = styled.div`
     display: flex;
 `;
 const LeftCategories = styled.div`
-    width: 35%;
+    width: 45%;
 `;
 const MainHeading = styled.h1`
     font-weight: 600;
@@ -553,7 +580,7 @@ const GramPack = styled.li`
         background-color: #21282c;
         color: #f6f5f4;
     }
-    &:nth-child(2){
+    &:nth-child(2) {
         background-color: #21282c;
         color: #f6f5f4;
     }
@@ -621,18 +648,57 @@ const ViewButton = styled.button`
     border-radius: 35px;
     font-size: 20px;
     color: #000;
-    &:hover{
+    &:hover {
         background-color: #ff7b00;
         color: #fff;
     }
 `;
 const RightCategories = styled.div`
-    width: 35%;
+    width: 47%;
 `;
 
 const RightContainer = styled.div`
-    width: 10%;
+    width: 32%;
+    background-color: #eeeceb;
+    border-radius: 20px;
+    padding: 30px;
 `;
+
+const BillSection = styled.div`
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+`;
+const HeadingBill = styled.h1`
+    font-size: 20px;
+    font-weight: 600;
+`;
+const HeadingOrder = styled.h1`
+    font-size: 20px;
+    font-weight: 600;
+`;
+const Delivery = styled.ul`
+    display: flex;
+`;
+const Item = styled.li`
+    background-color: #d5d2d1;
+    padding: 15px 25px;
+    margin-right: 20px;
+    border-radius: 35px;
+    color: #000;
+    &:last-child {
+        margin-right: 0;
+    }
+    &:hover {
+        background-color: #21282c;
+        color: #f6f5f4;
+    }
+    &:nth-child(2) {
+        background-color: #21282c;
+        color: #f6f5f4;
+    }
+`;
+const SectionDelivery = styled.div``;
 
 // done
 
