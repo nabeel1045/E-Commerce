@@ -203,18 +203,24 @@ function Spotlight() {
                                 <Categories>
                                     <Category1>
                                         <CategoryImage>
-                                            <Image1 />
+                                            <Image1
+                                                src={require("../Assets/images/frame2.jpg")}
+                                                alt="Frame"
+                                            />
                                         </CategoryImage>
-                                        <HeadingBeans>
-                                            Indonesian Beans
-                                        </HeadingBeans>
-                                        <Paragraph>
-                                            Selected Coffee Beans with best
-                                            Quality form indonesian
-                                        </Paragraph>
-                                        <Price>$ 35. 00</Price>
+                                        <DetailsCategory>
+                                            <HeadingBeans>
+                                                Indonesian Beans
+                                            </HeadingBeans>
+                                            <Paragraph>
+                                                Selected Coffee Beans with best
+                                                Quality form indonesian
+                                            </Paragraph>
+                                            <Price>$ 35. 00</Price>
+                                        </DetailsCategory>
                                     </Category1>
                                     <Discount>
+                                        <Heading1>Roasting Type</Heading1>
                                         <ListDiscount>
                                             <Percentage>25%</Percentage>
                                             <Percentage>50%</Percentage>
@@ -223,6 +229,7 @@ function Spotlight() {
                                         </ListDiscount>
                                     </Discount>
                                     <VolumePack>
+                                        <Heading1>Volume Pack</Heading1>
                                         <PackList>
                                             <GramPack>250g</GramPack>
                                             <GramPack>500g</GramPack>
@@ -232,10 +239,10 @@ function Spotlight() {
                                     <Button>Add to bill</Button>
                                 </Categories>
                             </LeftCategories>
-                            <RightCategories>
+                            {/* <RightCategories>
 
 
-                            </RightCategories>
+                            </RightCategories> */}
                         </MiddleCategories>
                     </MiddleContainer>
                     <RightContainer></RightContainer>
@@ -365,6 +372,67 @@ const ItemsHeading = styled.h1`
     font-size: 15px;
     margin-left: 13px;
 `;
+
+const MiddleCategories = styled.div``;
+const LeftCategories = styled.div`
+    width: 40%;
+`;
+const MainHeading = styled.h1`
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 60px;
+    margin-bottom: 30px;
+`;
+const Categories = styled.div`
+    background-color: #eeeceb;
+    border-radius: 20px;
+`;
+const Category1 = styled.div`
+    display: flex;
+`;
+const CategoryImage = styled.div`
+    width: 40%;
+    background-color: #eeeceb;
+    overflow: hidden;
+    font-weight: 600;
+    border-radius: 20px;
+`;
+const Image1 = styled.img`
+    width: 100%;
+    display: block;
+`;
+
+const DetailsCategory = styled.div`
+    padding: 15px;
+`;
+const HeadingBeans = styled.h2`
+    font-weight: 600;
+    font-size: 18px;
+`;
+const Paragraph = styled.p`
+    font-size: 14px;
+    width: 70%;
+`;
+const Price = styled.h3`
+    font-weight: 600;
+`;
+
+const Discount = styled.div`
+    margin-top: 50px;
+    padding-left: 10px;
+`;
+const ListDiscount = styled.ul`
+    display: flex;
+`;
+const Percentage = styled.li``;
+const VolumePack = styled.div``;
+const PackList = styled.ul``;
+const Heading1 = styled.h6`
+    font-size: 15px;
+    font-weight: 600;
+`;
+const GramPack = styled.li``;
+const Button = styled.button``;
 
 const RightContainer = styled.div`
     width: 10%;
