@@ -238,11 +238,93 @@ function Spotlight() {
                                     </VolumePack>
                                     <Button>Add to bill</Button>
                                 </Categories>
+                                <Category2>
+                                    <EthopianBeans>
+                                        <CategoryImage>
+                                            <Image1
+                                                src={require("../Assets/images/frame4.jpg")}
+                                                alt="Frame"
+                                            />
+                                        </CategoryImage>
+                                        <DetailsCategory>
+                                            <HeadingBeans>
+                                                Ethopian Beans
+                                            </HeadingBeans>
+                                            <Paragraph>
+                                                Selected Coffee Beans with best
+                                                Quality form indonesian
+                                            </Paragraph>
+                                            <Price>$ 35. 00</Price>
+                                        </DetailsCategory>
+                                    </EthopianBeans>
+                                    <ViewButton>Add to bill</ViewButton>
+                                </Category2>
                             </LeftCategories>
-                            {/* <RightCategories>
-
-
-                            </RightCategories> */}
+                            <RightCategories>
+                                <Category3>
+                                    <CostaRicaBeans>
+                                        <CategoryImage>
+                                            <Image1
+                                                src={require("../Assets/images/frame3.jpg")}
+                                                alt="Frame"
+                                            />
+                                        </CategoryImage>
+                                        <DetailsCategory>
+                                            <HeadingBeans>
+                                                Costa Rica Beans
+                                            </HeadingBeans>
+                                            <Paragraph>
+                                                Selected Coffee Beans with best
+                                                Quality form indonesian
+                                            </Paragraph>
+                                            <Price>$ 35. 00</Price>
+                                        </DetailsCategory>
+                                    </CostaRicaBeans>
+                                    <ViewButton>Add to bill</ViewButton>
+                                </Category3>
+                                <Category4>
+                                    <PeruBeans>
+                                        <CategoryImage>
+                                            <Image1
+                                                src={require("../Assets/images/frame6.jpg")}
+                                                alt="Frame"
+                                            />
+                                        </CategoryImage>
+                                        <DetailsCategory>
+                                            <HeadingBeans>
+                                                PeruBeans
+                                            </HeadingBeans>
+                                            <Paragraph>
+                                                Selected Coffee Beans with best
+                                                Quality form indonesian
+                                            </Paragraph>
+                                            <Price>$ 35. 00</Price>
+                                        </DetailsCategory>
+                                    </PeruBeans>
+                                    <ViewButton>Add to bill</ViewButton>
+                                </Category4>
+                                <Category5>
+                                    <GuatemalaBeans>
+                                        <CategoryImage>
+                                            <Image1
+                                                src={require("../Assets/images/frame5.jpg")}
+                                                alt="Frame"
+                                            />
+                                        </CategoryImage>
+                                        <DetailsCategory>
+                                            <HeadingBeans>
+                                                Guatemala Beans
+                                            </HeadingBeans>
+                                            <Paragraph>
+                                                Selected Coffee Beans with best
+                                                Quality form indonesian
+                                            </Paragraph>
+                                            <Price>$ 35. 00</Price>
+                                        </DetailsCategory>
+                                    </GuatemalaBeans>
+                                    <ViewButton>Add to bill</ViewButton>
+                                </Category5>
+                            </RightCategories>
                         </MiddleCategories>
                     </MiddleContainer>
                     <RightContainer></RightContainer>
@@ -373,9 +455,11 @@ const ItemsHeading = styled.h1`
     margin-left: 13px;
 `;
 
-const MiddleCategories = styled.div``;
+const MiddleCategories = styled.div`
+    display: flex;
+`;
 const LeftCategories = styled.div`
-    width: 40%;
+    width: 35%;
 `;
 const MainHeading = styled.h1`
     font-weight: 600;
@@ -386,16 +470,17 @@ const MainHeading = styled.h1`
 const Categories = styled.div`
     background-color: #eeeceb;
     border-radius: 20px;
+    padding: 30px 0;
 `;
 const Category1 = styled.div`
     display: flex;
 `;
 const CategoryImage = styled.div`
-    width: 40%;
+    width: 50%;
     background-color: #eeeceb;
     overflow: hidden;
     font-weight: 600;
-    border-radius: 20px;
+    border-radius: 50px;
 `;
 const Image1 = styled.img`
     width: 100%;
@@ -411,28 +496,139 @@ const HeadingBeans = styled.h2`
 `;
 const Paragraph = styled.p`
     font-size: 14px;
-    width: 70%;
+    width: 83%;
 `;
 const Price = styled.h3`
     font-weight: 600;
 `;
 
 const Discount = styled.div`
-    margin-top: 50px;
+    margin-top: 20px;
     padding-left: 10px;
 `;
 const ListDiscount = styled.ul`
     display: flex;
+    margin-bottom: 20px;
 `;
-const Percentage = styled.li``;
-const VolumePack = styled.div``;
-const PackList = styled.ul``;
+const Percentage = styled.li`
+    margin-right: 20px;
+    background-color: #d5d2d1;
+    padding: 15px 17px;
+    border-radius: 35px;
+    color: #f6f5f4;
+    &:hover {
+        background-color: #21282c;
+        color: #f6f5f4;
+    }
+    &:last-child {
+        margin-right: 0;
+    }
+    &:nth-child(2) {
+        background-color: #21282c;
+        color: #f6f5f4;
+    }
+`;
+const VolumePack = styled.div`
+    padding-left: 10px;
+    margin-bottom: 40px;
+`;
+const PackList = styled.ul`
+    display: flex;
+`;
 const Heading1 = styled.h6`
     font-size: 15px;
     font-weight: 600;
+    margin-bottom: 20px;
 `;
-const GramPack = styled.li``;
-const Button = styled.button``;
+const GramPack = styled.li`
+    margin-right: 40px;
+    background-color: #d5d2d1;
+    padding: 15px 25px;
+    border-radius: 35px;
+    color: #f6f5f4;
+    &:last-child {
+        margin-right: 0;
+    }
+    &:hover {
+        background-color: #21282c;
+        color: #f6f5f4;
+    }
+    &:nth-child(2){
+        background-color: #21282c;
+        color: #f6f5f4;
+    }
+`;
+const Button = styled.button`
+    display: block;
+    margin: 0 auto;
+    background-color: #ff7b00;
+    padding: 19px 110px;
+    border-radius: 35px;
+    font-size: 20px;
+    color: #fff;
+`;
+
+const Category2 = styled.div`
+    margin-top: 20px;
+    background-color: #eeeceb;
+    border-radius: 20px;
+    padding: 12px 0;
+`;
+
+const EthopianBeans = styled.div`
+    display: flex;
+    margin-bottom: 20px;
+`;
+
+const CostaRicaBeans = styled.div`
+    display: flex;
+`;
+const Category3 = styled.div`
+    margin-top: 113px;
+    background-color: #eeeceb;
+    border-radius: 20px;
+    padding: 30px 0;
+    margin-left: 20px;
+`;
+
+const Category4 = styled.div`
+    margin-top: 20px;
+    background-color: #eeeceb;
+    border-radius: 20px;
+    padding: 20px 0;
+    margin-left: 20px;
+`;
+const PeruBeans = styled.div`
+    display: flex;
+`;
+
+const Category5 = styled.div`
+    margin-top: 20px;
+    background-color: #eeeceb;
+    border-radius: 20px;
+    padding: 20px 0;
+    margin-left: 20px;
+`;
+const GuatemalaBeans = styled.div`
+    display: flex;
+`;
+
+const ViewButton = styled.button`
+    display: block;
+    margin: 0 auto;
+    background-color: #e5e0de;
+    padding: 19px 110px;
+    border-radius: 35px;
+    font-size: 20px;
+    color: #000;
+    &:hover{
+        background-color: #ff7b00;
+        color: #fff;
+    }
+`;
+const RightCategories = styled.div`
+    width: 35%;
+`;
 
 const RightContainer = styled.div`
     width: 10%;
