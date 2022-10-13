@@ -348,11 +348,34 @@ function Spotlight() {
                                     />
                                 </CartImage>
                                 <AddCart>
-                                    <PeruBeansHeading>Peru Beans</PeruBeansHeading>
-                                    <PriceHeading>Beans= 75%+250g</PriceHeading>
-                                    
+                                    <PeruBeansHeading>
+                                        Peru Beans
+                                    </PeruBeansHeading>
+                                    <BeansGram>Beans= 75%+250g</BeansGram>
+                                    <PriceHeading>$60.00</PriceHeading>
                                 </AddCart>
                             </PriceSection>
+                            <SectionCount>
+                                <Minus>
+                                    <ImageMinus
+                                        src={
+                                            require("../Assets/images/minus.svg")
+                                                .default
+                                        }
+                                        alt="Minus"
+                                    />
+                                </Minus>
+                                <Number>2</Number>
+                                <Plus1>
+                                    <ImagePlus
+                                        src={
+                                            require("../Assets/images/plus.svg")
+                                                .default
+                                        }
+                                        alt="Plus"
+                                    />
+                                </Plus1>
+                            </SectionCount>
                         </CartSection>
                     </RightContainer>
                 </MainContainer>
@@ -699,6 +722,50 @@ const Item = styled.li`
     }
 `;
 const SectionDelivery = styled.div``;
+const CartSection = styled.div`
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+`;
+const PriceSection = styled.div`
+    display: flex;
+    align-items: center;
+`;
+const CartImage = styled.div`
+    width: 40%;
+`;
+const PeruBeansImage = styled.img`
+    width: 100%;
+    display: block;
+`;
+const AddCart = styled.div``;
+const PeruBeansHeading = styled.h2`
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 15px;
+`;
+const BeansGram = styled.h3`
+    font-size: 15px;
+    color: #8d8785;
+    margin-bottom: 20px;
+`;
+const PriceHeading = styled.h4`
+    font-weight: 600;
+`;
+const SectionCount = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: end;
+`;
+const Minus = styled.div``;
+const ImageMinus = styled.img`
+    display: block;
+`;
+const Number = styled.h2``;
+const Plus1 = styled.div``;
+const ImagePlus = styled.img`
+    display: block;
+`;
 
 // done
 
