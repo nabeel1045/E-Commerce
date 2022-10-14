@@ -257,7 +257,7 @@ function Spotlight() {
                                             <Price>$ 35. 00</Price>
                                         </DetailsCategory>
                                     </EthopianBeans>
-                                    <ViewButton>Add to bill</ViewButton>
+                                    <ViewButton>view details</ViewButton>
                                 </Category2>
                             </LeftCategories>
                             <RightCategories>
@@ -280,7 +280,7 @@ function Spotlight() {
                                             <Price>$ 35. 00</Price>
                                         </DetailsCategory>
                                     </CostaRicaBeans>
-                                    <ViewButton>Add to bill</ViewButton>
+                                    <ViewButton>view details</ViewButton>
                                 </Category3>
                                 <Category4>
                                     <PeruBeans>
@@ -301,7 +301,7 @@ function Spotlight() {
                                             <Price>$ 35. 00</Price>
                                         </DetailsCategory>
                                     </PeruBeans>
-                                    <ViewButton>Add to bill</ViewButton>
+                                    <ViewButton>view details</ViewButton>
                                 </Category4>
                                 <Category5>
                                     <GuatemalaBeans>
@@ -322,7 +322,7 @@ function Spotlight() {
                                             <Price>$ 35. 00</Price>
                                         </DetailsCategory>
                                     </GuatemalaBeans>
-                                    <ViewButton>Add to bill</ViewButton>
+                                    <ViewButton>view details</ViewButton>
                                 </Category5>
                             </RightCategories>
                         </MiddleCategories>
@@ -356,27 +356,103 @@ function Spotlight() {
                                 </AddCart>
                             </PriceSection>
                             <SectionCount>
-                                <Minus>
-                                    <ImageMinus
-                                        src={
-                                            require("../Assets/images/minus.svg")
-                                                .default
-                                        }
-                                        alt="Minus"
-                                    />
-                                </Minus>
-                                <Number>2</Number>
-                                <Plus1>
-                                    <ImagePlus
-                                        src={
-                                            require("../Assets/images/plus.svg")
-                                                .default
-                                        }
-                                        alt="Plus"
-                                    />
-                                </Plus1>
+                                <Count>
+                                    <Minus>
+                                        <CountImage>
+                                            <ImageMinus
+                                                src={
+                                                    require("../Assets/images/minus.svg")
+                                                        .default
+                                                }
+                                                alt="Minus"
+                                            />
+                                        </CountImage>
+                                    </Minus>
+                                    <Number>2</Number>
+                                    <Plus1>
+                                        <CountImage>
+                                            <ImagePlus
+                                                src={
+                                                    require("../Assets/images/plus.svg")
+                                                        .default
+                                                }
+                                                alt="Plus"
+                                            />
+                                        </CountImage>
+                                    </Plus1>
+                                </Count>
                             </SectionCount>
                         </CartSection>
+                        <HR />
+                        <CartSection>
+                            <PriceSection>
+                                <CartImage>
+                                    <PeruBeansImage
+                                        src={require("../Assets/images/frame2.jpg")}
+                                        alt="Frame"
+                                    />
+                                </CartImage>
+                                <AddCart>
+                                    <PeruBeansHeading>
+                                        Indonesian Beans
+                                    </PeruBeansHeading>
+                                    <BeansGram>Beans= 75%+250g</BeansGram>
+                                    <PriceHeading>$60.00</PriceHeading>
+                                </AddCart>
+                            </PriceSection>
+                            <SectionCount>
+                                <Count>
+                                    <Minus>
+                                        <CountImage>
+                                            <ImageMinus
+                                                src={
+                                                    require("../Assets/images/minus.svg")
+                                                        .default
+                                                }
+                                                alt="Minus"
+                                            />
+                                        </CountImage>
+                                    </Minus>
+                                    <Number>2</Number>
+                                    <Plus1>
+                                        <CountImage>
+                                            <ImagePlus
+                                                src={
+                                                    require("../Assets/images/plus.svg")
+                                                        .default
+                                                }
+                                                alt="Plus"
+                                            />
+                                        </CountImage>
+                                    </Plus1>
+                                </Count>
+                            </SectionCount>
+                        </CartSection>
+                        <ItemsSection>
+                            <ItemCount>
+                                <Item1>Items</Item1>
+                                <Item1>Discount</Item1>
+                            </ItemCount>
+                            <PriceCount>
+                                <Price1>$ 102.50</Price1>
+                                <Price1>-$ 3.00</Price1>
+                            </PriceCount>
+                        </ItemsSection>
+                        <HrLast />
+
+                        <TotalPrice>
+                            <Total>Total</Total>
+                            <Prices>$ 99.50</Prices>
+                        </TotalPrice>
+                        <PaymentSection>
+                            <HeadingPyment>Payment</HeadingPyment>
+                            <PaymentMood>
+                                <Cash>Cash</Cash>
+                                <Cash>Debit</Cash>
+                                <Cash>E-wallet</Cash>
+                            </PaymentMood>
+                        </PaymentSection>
+                        <CheckOutButton>Check Out</CheckOutButton>
                     </RightContainer>
                 </MainContainer>
             </SpotlightContainer>
@@ -386,6 +462,153 @@ function Spotlight() {
 
 export default Spotlight;
 
+
+// HeaderContainer start
+const HeaderContainer = styled.div`
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+`;
+const Header = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 140px;
+`;
+
+// LeftBox Start
+
+
+const LeftBox = styled.div`
+    display: flex;
+    align-items: center;
+    width: 20%;
+`;
+const Logo = styled.div`
+    margin-right: 40px;
+    width: 40px;
+`;
+const LogoImage = styled.img`
+    width: 100%;
+    display: block;
+`;
+const Heading = styled.div``;
+const SmallHeading = styled.h2`
+    font-size: 12px;
+    font-weight: 300;
+    margin-bottom: 10px;
+`;
+const BigHeading = styled.h1`
+    font-size: 20px;
+    font-weight: 600;
+`;
+// LeftBox done
+
+
+// MiddleBox start
+const MiddleBox = styled.div`
+    display: flex;
+    align-items: center;
+    background: #eeeceb;
+    padding: 20px 50px;
+    border-radius: 35px;
+    width: 25%;
+`;
+const HeaderForm = styled.form`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+`;
+const InputForm = styled.input`
+    border: none;
+    background: #eeeceb;
+    opacity: 0.5;
+`;
+
+const SearchImage = styled.img``;
+
+// MiddleBox done
+
+
+// RightBox start
+const RightBox = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+`;
+const ImageNoti = styled.div`
+    width: 10%;
+    margin-right: 25px;
+`;
+const NotiImage = styled.img`
+    display: block;
+    width: 100%;
+`;
+
+const Avatar = styled.div`
+    display: flex;
+    align-items: center;
+`;
+const RoundImage = styled.div`
+    width: 20%;
+    border-radius: 50%;
+    overflow: hidden;
+`;
+const FrameImage = styled.img`
+    width: 100%;
+    display: block;
+`;
+
+const Details = styled.div`
+    margin-left: 15px;
+`;
+const Admin = styled.h4`
+    font-size: 13px;
+    color: #a59e98;
+    margin-bottom: 7px;
+`;
+const Name = styled.h3`
+    font-weight: 600;
+    font-size: 16px;
+`;
+
+const Add = styled.div`
+    background: #eeeceb;
+    padding: 20px 50px;
+    border-radius: 35px;
+    display: flex;
+    color: #000;
+`;
+const Form = styled.input``;
+const Plus = styled.div`
+    width: 20px;
+    margin-right: 10px;
+`;
+const PlusImage = styled.img`
+    width: 100%;
+    display: block;
+`;
+
+const HR = styled.hr`
+    border-bottom: 1px solid #cdc5c2;
+    margin-top: 25px;
+`;
+
+// RightBox Done
+// HeaderContainer done
+
+
+
+
+
+
+
+
+
+// SpotlightContainer start
+
 const SpotlightContainer = styled.div`
     width: 90%;
     margin: 0 auto;
@@ -394,8 +617,10 @@ const SpotlightContainer = styled.div`
 `;
 const MainContainer = styled.div`
     display: flex;
-    /* justify-content: space-between; */
+
 `;
+
+// LeftContainer start
 const LeftContainer = styled.div`
     width: 7%;
 `;
@@ -454,8 +679,10 @@ const SettingsImage = styled.img`
         filter: none;
     }
 `;
+// LeftContainer done
 
-// middle start
+
+// MiddleContainer start
 
 const MiddleContainer = styled.div`
     width: 60%;
@@ -463,7 +690,7 @@ const MiddleContainer = styled.div`
 const MiddleMenuIcons = styled.div`
     display: flex;
     align-items: center;
-    /* justify-content: space-between; */
+
 `;
 const ListItems = styled.ul`
     display: flex;
@@ -508,6 +735,11 @@ const ItemsHeading = styled.h1`
 const MiddleCategories = styled.div`
     display: flex;
 `;
+
+
+
+// LeftCategories start
+
 const LeftCategories = styled.div`
     width: 45%;
 `;
@@ -730,22 +962,25 @@ const CartSection = styled.div`
 const PriceSection = styled.div`
     display: flex;
     align-items: center;
+    width: 60%;
 `;
 const CartImage = styled.div`
-    width: 40%;
+    width: 60%;
 `;
 const PeruBeansImage = styled.img`
     width: 100%;
     display: block;
 `;
-const AddCart = styled.div``;
+const AddCart = styled.div`
+    width: 80%;
+`;
 const PeruBeansHeading = styled.h2`
     font-weight: 600;
-    font-size: 18px;
+    font-size: 14px;
     margin-bottom: 15px;
 `;
 const BeansGram = styled.h3`
-    font-size: 15px;
+    font-size: 13px;
     color: #8d8785;
     margin-bottom: 20px;
 `;
@@ -755,139 +990,124 @@ const PriceHeading = styled.h4`
 const SectionCount = styled.div`
     display: flex;
     align-items: center;
-    justify-content: end;
+    margin-bottom: -70px;
+    margin-left: 35px;
 `;
-const Minus = styled.div``;
+
+const Count = styled.ul`
+    display: flex;
+    align-items: center;
+`;
+const Minus = styled.li`
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #000;
+    padding: 15px 7px;
+    border-radius: 50%;
+`;
+const CountImage = styled.div``;
 const ImageMinus = styled.img`
     display: block;
+    width: 100%;
 `;
-const Number = styled.h2``;
-const Plus1 = styled.div``;
+const Number = styled.li`
+    font-weight: 600;
+`;
+const Plus1 = styled.li`
+    margin-left: 20px;
+    border: 1px solid #000;
+    padding: 5px;
+    border-radius: 50%;
+`;
+
 const ImagePlus = styled.img`
     display: block;
+    width: 100%;
 `;
 
-// done
-
-const HeaderContainer = styled.div`
-    width: 90%;
-    margin: 0 auto;
-    height: 100%;
-`;
-const Header = styled.div`
+const ItemsSection = styled.div`
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    height: 140px;
+    margin-top: 40px;
 `;
-const LeftBox = styled.div`
-    display: flex;
-    align-items: center;
-    width: 20%;
-`;
-const Logo = styled.div`
-    margin-right: 40px;
-    width: 40px;
-`;
-const LogoImage = styled.img`
-    width: 100%;
-    display: block;
-`;
-const Heading = styled.div``;
-const SmallHeading = styled.h2`
-    font-size: 12px;
-    font-weight: 300;
+const ItemCount = styled.ul``;
+
+const Item1 = styled.li`
     margin-bottom: 10px;
-`;
-const BigHeading = styled.h1`
-    font-size: 20px;
-    font-weight: 600;
+    color: #8d8785;
+    font-size: 14px;
 `;
 
-// LeftBox done
+const PriceCount = styled.ul``;
 
-const MiddleBox = styled.div`
-    display: flex;
-    align-items: center;
-    background: #eeeceb;
-    padding: 20px 50px;
-    border-radius: 35px;
-    width: 25%;
-`;
-const HeaderForm = styled.form`
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-`;
-const InputForm = styled.input`
-    border: none;
-    background: #eeeceb;
-    opacity: 0.5;
-`;
-
-const SearchImage = styled.img``;
-
-// MiddleBox done
-
-const RightBox = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 40%;
-`;
-const ImageNoti = styled.div`
-    width: 10%;
-    margin-right: 25px;
-`;
-const NotiImage = styled.img`
-    display: block;
-    width: 100%;
-`;
-
-const Avatar = styled.div`
-    display: flex;
-    align-items: center;
-`;
-const RoundImage = styled.div`
-    width: 20%;
-    border-radius: 50%;
-    overflow: hidden;
-`;
-const FrameImage = styled.img`
-    width: 100%;
-    display: block;
-`;
-
-const Details = styled.div`
-    margin-left: 15px;
-`;
-const Admin = styled.h4`
-    font-size: 13px;
-    color: #a59e98;
-    margin-bottom: 7px;
-`;
-const Name = styled.h3`
-    font-weight: 600;
+const Price1 = styled.li`
+    color: #13ee5f;
+    margin-bottom: 10px;
     font-size: 16px;
+    &:nth-child(2) {
+        color: red;
+    }
+`;
+const HrLast = styled.hr`
+    border-bottom: 1px solid #cdc5c2;
+    margin-top: 5px;
 `;
 
-const Add = styled.div`
-    background: #eeeceb;
-    padding: 20px 50px;
-    border-radius: 35px;
+const TotalPrice = styled.ul`
     display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+`;
+const Total = styled.li`
     color: #000;
+    font-size: 14px;
+    font-weight: 600;
 `;
-const Form = styled.input``;
-const Plus = styled.div`
-    width: 20px;
-    margin-right: 10px;
-`;
-const PlusImage = styled.img`
-    width: 100%;
-    display: block;
+const Prices = styled.li`
+    font-size: 16px;
+    color: #13ee5f;
 `;
 
-// RightBox Done
-// HeaderContainer done
+const PaymentSection = styled.div`
+    margin-top: 80px;
+`;
+const PaymentMood = styled.ul`
+    display: flex;
+    margin-bottom: 40px;
+`;
+const HeadingPyment = styled.h6`
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 20px;
+`;
+const Cash = styled.li`
+    margin-right: 40px;
+    background-color: #d5d2d1;
+    padding: 15px 26px;
+    border-radius: 35px;
+    color: #f6f5f4;
+    &:last-child {
+        margin-right: 0;
+    }
+    &:hover {
+        background-color: #21282c;
+        color: #f6f5f4;
+    }
+    &:nth-child(2) {
+        background-color: #21282c;
+        color: #f6f5f4;
+    }
+`;
+const CheckOutButton = styled.button`
+    display: block;
+    margin: 0 auto;
+    background-color: #ff7b00;
+    padding: 19px 150px;
+    border-radius: 35px;
+    font-size: 15px;
+    color: #fff;
+`;
+
+
+
