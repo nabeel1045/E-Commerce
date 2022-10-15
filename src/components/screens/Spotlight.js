@@ -72,6 +72,7 @@ function Spotlight() {
                     </RightBox>
                 </Header>
             </HeaderContainer>
+            <HrFirst />
 
             {/* HeaderContainer Done */}
 
@@ -462,7 +463,6 @@ function Spotlight() {
 
 export default Spotlight;
 
-
 // HeaderContainer start
 const HeaderContainer = styled.div`
     width: 90%;
@@ -477,7 +477,6 @@ const Header = styled.div`
 `;
 
 // LeftBox Start
-
 
 const LeftBox = styled.div`
     display: flex;
@@ -497,13 +496,24 @@ const SmallHeading = styled.h2`
     font-size: 12px;
     font-weight: 300;
     margin-bottom: 10px;
+
+    @media all and (max-width: 1380px) {
+        font-size: 11px;
+    }
 `;
 const BigHeading = styled.h1`
     font-size: 20px;
     font-weight: 600;
+
+    @media all and (max-width: 1440px) {
+        font-size: 19px;
+    }
+
+    @media all and (max-width: 1380px) {
+        font-size: 16px;
+    }
 `;
 // LeftBox done
-
 
 // MiddleBox start
 const MiddleBox = styled.div`
@@ -513,6 +523,10 @@ const MiddleBox = styled.div`
     padding: 20px 50px;
     border-radius: 35px;
     width: 25%;
+
+    @media all and (max-width: 1380px) {
+        padding: 15px 20px;
+    }
 `;
 const HeaderForm = styled.form`
     display: flex;
@@ -530,7 +544,6 @@ const SearchImage = styled.img``;
 
 // MiddleBox done
 
-
 // RightBox start
 const RightBox = styled.div`
     display: flex;
@@ -541,6 +554,14 @@ const RightBox = styled.div`
 const ImageNoti = styled.div`
     width: 10%;
     margin-right: 25px;
+
+    @media all and (max-width: 1440px) {
+        width: 15%;
+    }
+
+    @media all and (max-width: 1380px) {
+        width: 25%;
+    }
 `;
 const NotiImage = styled.img`
     display: block;
@@ -580,6 +601,10 @@ const Add = styled.div`
     border-radius: 35px;
     display: flex;
     color: #000;
+
+    @media all and (max-width: 1380px) {
+        padding: 20px 20px;
+    }
 `;
 const Form = styled.input``;
 const Plus = styled.div`
@@ -591,6 +616,12 @@ const PlusImage = styled.img`
     display: block;
 `;
 
+const HrFirst = styled.hr`
+    border-bottom: 1px solid #cdc5c2;
+    width: 90%;
+    margin: 0 auto;
+`;
+
 const HR = styled.hr`
     border-bottom: 1px solid #cdc5c2;
     margin-top: 25px;
@@ -599,25 +630,16 @@ const HR = styled.hr`
 // RightBox Done
 // HeaderContainer done
 
-
-
-
-
-
-
-
-
 // SpotlightContainer start
 
 const SpotlightContainer = styled.div`
     width: 90%;
     margin: 0 auto;
     height: 100%;
-    padding-top: 40px;
+    padding-top: 20px;
 `;
 const MainContainer = styled.div`
     display: flex;
-
 `;
 
 // LeftContainer start
@@ -681,7 +703,6 @@ const SettingsImage = styled.img`
 `;
 // LeftContainer done
 
-
 // MiddleContainer start
 
 const MiddleContainer = styled.div`
@@ -690,7 +711,6 @@ const MiddleContainer = styled.div`
 const MiddleMenuIcons = styled.div`
     display: flex;
     align-items: center;
-
 `;
 const ListItems = styled.ul`
     display: flex;
@@ -712,6 +732,14 @@ const Items = styled.li`
         background-color: #ff7b00;
         color: #fff;
     }
+
+    @media all and (max-width: 1440px) {
+        margin-right: 15px;
+    }
+    @media all and (max-width: 1380px) {
+        margin-right: 10px;
+        padding: 5px 15px;
+    }
 `;
 const ImageList = styled.div`
     background: #fff;
@@ -720,6 +748,9 @@ const ImageList = styled.div`
     filter: grayscale();
     &:hover {
         filter: none;
+    }
+    @media all and (max-width: 1380px) {
+        padding: 8px;
     }
 `;
 const CoffeeImage = styled.img``;
@@ -730,24 +761,36 @@ const SnacksImage = styled.img``;
 const ItemsHeading = styled.h1`
     font-size: 15px;
     margin-left: 13px;
+    @media all and (max-width: 1380px) {
+        font-size: 13px;
+        margin-left: 11px;
+    }
 `;
 
 const MiddleCategories = styled.div`
     display: flex;
 `;
 
-
-
 // LeftCategories start
 
 const LeftCategories = styled.div`
     width: 45%;
+
+    @media all and (max-width: 1440px) {
+        width: 47%;
+    }
 `;
 const MainHeading = styled.h1`
     font-weight: 600;
     font-size: 20px;
     margin-top: 60px;
     margin-bottom: 30px;
+
+@media all and (max-width: 1380px){
+    margin-top: 40px;
+    margin-bottom: 30px;
+
+}
 `;
 const Categories = styled.div`
     background-color: #eeeceb;
@@ -771,6 +814,12 @@ const Image1 = styled.img`
 
 const DetailsCategory = styled.div`
     padding: 15px;
+
+
+    @media all and (max-width: 1380px){
+        padding: 0;
+}
+
 `;
 const HeadingBeans = styled.h2`
     font-weight: 600;
@@ -782,6 +831,7 @@ const Paragraph = styled.p`
 `;
 const Price = styled.h3`
     font-weight: 600;
+    margin-bottom: 10px;
 `;
 
 const Discount = styled.div`
@@ -809,6 +859,12 @@ const Percentage = styled.li`
         background-color: #21282c;
         color: #f6f5f4;
     }
+
+
+@media all and (max-width: 1380px){
+
+    margin-right: 10px;
+}
 `;
 const VolumePack = styled.div`
     padding-left: 10px;
@@ -839,6 +895,11 @@ const GramPack = styled.li`
         background-color: #21282c;
         color: #f6f5f4;
     }
+    
+@media all and (max-width: 1380px){
+
+    margin-right: 20px;
+}
 `;
 const Button = styled.button`
     display: block;
@@ -848,8 +909,17 @@ const Button = styled.button`
     border-radius: 35px;
     font-size: 20px;
     color: #fff;
+
+
+
+@media all and (max-width: 1380px){
+
+    padding: 19px 100px;
+    font-size: 19px;
+}
 `;
 
+// Category2 start
 const Category2 = styled.div`
     margin-top: 20px;
     background-color: #eeeceb;
@@ -865,14 +935,25 @@ const EthopianBeans = styled.div`
 const CostaRicaBeans = styled.div`
     display: flex;
 `;
+// Category2 done
+
+// Category3 start
 const Category3 = styled.div`
     margin-top: 113px;
     background-color: #eeeceb;
     border-radius: 20px;
     padding: 30px 0;
     margin-left: 20px;
+    @media all and (max-width: 1380px){
+
+        margin-top: 95px;
+}
 `;
 
+
+// Category3 done
+
+// Category4 start
 const Category4 = styled.div`
     margin-top: 20px;
     background-color: #eeeceb;
@@ -883,7 +964,9 @@ const Category4 = styled.div`
 const PeruBeans = styled.div`
     display: flex;
 `;
+// Category4 done
 
+// Category5 start
 const Category5 = styled.div`
     margin-top: 20px;
     background-color: #eeeceb;
@@ -907,11 +990,23 @@ const ViewButton = styled.button`
         background-color: #ff7b00;
         color: #fff;
     }
+    @media all and (max-width: 1380px){
+
+        padding: 19px 90px;
+        font-size: 20px;
+}
 `;
 const RightCategories = styled.div`
     width: 47%;
+
+    @media all and (max-width: 1440px) {
+        width: 48%;
+    }
 `;
 
+
+
+// RightContainer start
 const RightContainer = styled.div`
     width: 32%;
     background-color: #eeeceb;
@@ -937,7 +1032,7 @@ const Delivery = styled.ul`
 `;
 const Item = styled.li`
     background-color: #d5d2d1;
-    padding: 15px 25px;
+    padding: 15px 20px;
     margin-right: 20px;
     border-radius: 35px;
     color: #000;
@@ -952,6 +1047,10 @@ const Item = styled.li`
         background-color: #21282c;
         color: #f6f5f4;
     }
+    @media all and (max-width: 1380px){
+        padding: 17px 14px;
+
+}
 `;
 const SectionDelivery = styled.div``;
 const CartSection = styled.div`
@@ -1084,7 +1183,7 @@ const HeadingPyment = styled.h6`
 const Cash = styled.li`
     margin-right: 40px;
     background-color: #d5d2d1;
-    padding: 15px 26px;
+    padding: 15px 23px;
     border-radius: 35px;
     color: #f6f5f4;
     &:last-child {
@@ -1103,11 +1202,8 @@ const CheckOutButton = styled.button`
     display: block;
     margin: 0 auto;
     background-color: #ff7b00;
-    padding: 19px 150px;
+    padding: 21px 139px;
     border-radius: 35px;
-    font-size: 15px;
+    font-size: 16px;
     color: #fff;
 `;
-
-
-
