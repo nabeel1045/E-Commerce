@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import {  NavLink } from "react-router-dom";
 
 function Spotlight() {
     return (
@@ -133,7 +134,7 @@ function Spotlight() {
                     <MiddleContainer>
                         <MiddleMenuIcons>
                             <ListItems>
-                                <Items>
+                                <Items  exact to={"/coffee"}>
                                     <ImageList>
                                         <CoffeeImage
                                             src={
@@ -485,6 +486,10 @@ const LeftBox = styled.div`
     display: flex;
     align-items: center;
     width: 20%;
+    @media all and (max-width: 1080px){
+        width: 21%;
+}
+
 `;
 const Logo = styled.div`
     margin-right: 40px;
@@ -538,6 +543,11 @@ const MiddleBox = styled.div`
     @media all and (max-width: 1380px) {
         padding: 15px 20px;
     }
+    @media all and (max-width: 1080px){
+        padding: 15px 10px;
+
+}
+
 `;
 const HeaderForm = styled.form`
     display: flex;
@@ -619,6 +629,10 @@ const Add = styled.div`
     @media all and (max-width: 1380px) {
         padding: 20px 20px;
     }
+    @media all and (max-width: 1080px){
+        padding: 20px 10px;
+}
+
 `;
 const Form = styled.input``;
 const Plus = styled.div`
@@ -747,7 +761,7 @@ const ListItems = styled.ul`
     align-items: center;
     justify-content: space-between;
 `;
-const Items = styled.li`
+const Items = styled(NavLink)`
     margin-right: 25px;
     display: flex;
     align-items: center;
@@ -770,6 +784,11 @@ const Items = styled.li`
         margin-right: 10px;
         padding: 5px 15px;
     }
+    @media all and (max-width: 1080px){
+        margin-right: 14px;
+        padding: 5px 10px;
+}
+
 `;
 const ImageList = styled.div`
     background: #fff;
@@ -791,7 +810,7 @@ const Tea2Image = styled.img``;
 const CakesImage = styled.img``;
 const BottleImage = styled.img``;
 const SnacksImage = styled.img``;
-const ItemsHeading = styled.h1`
+const ItemsHeading = styled(NavLink)`
     font-size: 15px;
     margin-left: 13px;
     @media all and (max-width: 1380px) {
@@ -865,11 +884,18 @@ const HeadingBeans = styled.h2`
 const Paragraph = styled.p`
     font-size: 14px;
     width: 83%;
+    line-height: 25px;
+    margin-bottom: 10px;
 
     @media all and (max-width: 1280px) {
         width: 94%;
         margin-bottom: 10px;
+        line-height: 25px;
     }
+    @media all and (max-width: 1080px){
+        width: 97%;
+        line-height: 25px;
+}
 `;
 const Price = styled.h3`
     font-weight: 600;
@@ -908,10 +934,18 @@ const Percentage = styled.li`
     @media all and (max-width: 1280px) {
         padding: 12px 12px;
     }
+    @media all and (max-width: 1080px){
+        padding: 12px 9px;
+}
+
 `;
 const VolumePack = styled.div`
     padding-left: 10px;
     margin-bottom: 40px;
+
+    @media all and (max-width: 1080px){
+        margin-bottom: 25px;
+}
 `;
 const PackList = styled.ul`
     display: flex;
@@ -945,6 +979,11 @@ const GramPack = styled.li`
     @media all and (max-width: 1280px){
         padding: 14px 19px;
 }
+@media all and (max-width: 1080px){
+
+    margin-right: 14px;
+    padding: 14px 17px;
+}
 `;
 const Button = styled.button`
     display: block;
@@ -962,6 +1001,10 @@ const Button = styled.button`
     @media all and (max-width: 1280px){
         padding: 19px 80px;
 }
+@media all and (max-width: 1080px){
+    padding: 15px 65px;
+    font-size: 18px;
+}
 `;
 
 // Category2 start
@@ -970,6 +1013,9 @@ const Category2 = styled.div`
     background-color: #eeeceb;
     border-radius: 20px;
     padding: 12px 0;
+    @media all and (max-width: 1080px){
+    margin-top: 15px;
+}
 `;
 
 const EthopianBeans = styled.div`
@@ -1010,6 +1056,7 @@ const Category4 = styled.div`
     @media all and (max-width: 1280px){
         margin-left: 9px;
 }
+
 `;
 const PeruBeans = styled.div`
     display: flex;
@@ -1050,6 +1097,10 @@ const ViewButton = styled.button`
     @media all and (max-width: 1280px){
         padding: 19px 60px;
 }
+@media all and (max-width: 1080px){
+    padding: 15px 40px;
+    font-size: 17px;
+}
 `;
 const RightCategories = styled.div`
     width: 47%;
@@ -1074,7 +1125,7 @@ const RightContainer = styled.div`
     }
     @media all and (max-width: 1280px){
         margin-left: 10px;
-        padding: 17px;
+        padding: 13px;
 }
 `;
 
@@ -1082,15 +1133,26 @@ const BillSection = styled.div`
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
+    @media all and (max-width: 1280px){
+        margin-bottom: 30px;
+}
 `;
 const HeadingBill = styled.h1`
     font-size: 20px;
     font-weight: 600;
+    @media all and (max-width: 1280px){
+        font-size: 18px;
+}
 `;
 const HeadingOrder = styled.h1`
     font-size: 20px;
     font-weight: 600;
+    @media all and (max-width: 1280px){
+        font-size: 18px;
+
+}
 `;
+
 const Delivery = styled.ul`
     display: flex;
 `;
@@ -1114,17 +1176,31 @@ const Item = styled.li`
     @media all and (max-width: 1380px) {
         padding: 17px 14px;
     }
+    @media all and (max-width: 1280px){
+        padding: 12px 10px;
+        font-size: 15px;
+}
+@media all and (max-width: 1080px){
+    font-size: 14px;
+}
 `;
 const SectionDelivery = styled.div``;
 const CartSection = styled.div`
     display: flex;
     align-items: center;
     margin-top: 40px;
+    @media all and (max-width: 1080px){
+
+        
+}
 `;
 const PriceSection = styled.div`
     display: flex;
     align-items: center;
     width: 60%;
+    @media all and (max-width: 1080px){
+        width: 80%;
+}
 `;
 const CartImage = styled.div`
     width: 60%;
@@ -1134,17 +1210,27 @@ const PeruBeansImage = styled.img`
     display: block;
 `;
 const AddCart = styled.div`
-    width: 80%;
+    width: 83%;
 `;
 const PeruBeansHeading = styled.h2`
     font-weight: 600;
     font-size: 14px;
     margin-bottom: 15px;
+    @media all and (max-width: 1280px){
+        margin-bottom: 13px;
+}
 `;
 const BeansGram = styled.h3`
     font-size: 13px;
     color: #8d8785;
     margin-bottom: 20px;
+    @media all and (max-width: 1280px){
+
+        font-size: 11px;
+}
+@media all and (max-width: 1280px){
+    margin-bottom: 10px;
+}
 `;
 const PriceHeading = styled.h4`
     font-weight: 600;
@@ -1154,6 +1240,9 @@ const SectionCount = styled.div`
     align-items: center;
     margin-bottom: -70px;
     margin-left: 35px;
+    @media all and (max-width: 1280px){
+        margin-bottom: -55px;
+}
 `;
 
 const Count = styled.ul`
@@ -1167,6 +1256,14 @@ const Minus = styled.li`
     border: 1px solid #000;
     padding: 15px 7px;
     border-radius: 50%;
+    @media all and (max-width: 1280px){
+        margin-right: 7px;
+        padding: 15px 7px;
+}
+@media all and (max-width: 1080px){
+    margin-right: 7px;
+        padding: 10px 6px;
+}
 `;
 const CountImage = styled.div``;
 const ImageMinus = styled.img`
@@ -1181,6 +1278,10 @@ const Plus1 = styled.li`
     border: 1px solid #000;
     padding: 5px;
     border-radius: 50%;
+
+    @media all and (max-width: 1280px){
+        margin-left: 9px;
+}
 `;
 
 const ImagePlus = styled.img`
@@ -1268,6 +1369,14 @@ const Cash = styled.li`
     @media all and (max-width: 1380px) {
         margin-right: 39px;
     }
+    @media all and (max-width: 1280px){
+        margin-right: 21px;
+        padding: 15px 19px;
+}
+@media all and (max-width: 1080px){
+    margin-right: 20px;
+        padding: 15px 16px;
+}
 `;
 const CheckOutButton = styled.button`
     display: block;
@@ -1281,4 +1390,8 @@ const CheckOutButton = styled.button`
     @media all and (max-width: 1380px) {
         padding: 21px 136px;
     }
+    @media all and (max-width: 1280px){
+        padding: 20px 100px;
+        font-size: 16px;
+}
 `;
