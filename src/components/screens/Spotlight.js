@@ -213,22 +213,22 @@ function Spotlight() {
                                 <MainHeading>Beans Menu</MainHeading>
                                 <Categories>
                                     <Category1>
-                                        <CategoryImage>
-                                            <Image1
+                                        <CategoryImage1>
+                                            <ImageFrame
                                                 src={require("../Assets/images/frame2.jpg")}
                                                 alt="Frame"
                                             />
-                                        </CategoryImage>
-                                        <DetailsCategory>
-                                            <HeadingBeans>
+                                        </CategoryImage1>
+                                        <DetailsCategory1>
+                                            <HeadingBeans1>
                                                 Indonesian Beans
-                                            </HeadingBeans>
-                                            <Paragraph>
+                                            </HeadingBeans1>
+                                            <Paragraph1>
                                                 Selected Coffee Beans with best
                                                 Quality form indonesian
-                                            </Paragraph>
-                                            <Price>$ 35. 00</Price>
-                                        </DetailsCategory>
+                                            </Paragraph1>
+                                            <Price35>$ 35. 00</Price35>
+                                        </DetailsCategory1>
                                     </Category1>
                                     <Discount>
                                         <Heading1>Roasting Type</Heading1>
@@ -251,22 +251,22 @@ function Spotlight() {
                                 </Categories>
                                 <Category2>
                                     <EthopianBeans>
-                                        <CategoryImage>
-                                            <Image1
+                                        <CategoryImage1>
+                                            <ImageFrame
                                                 src={require("../Assets/images/frame4.jpg")}
                                                 alt="Frame"
                                             />
-                                        </CategoryImage>
-                                        <DetailsCategory>
-                                            <HeadingBeans>
+                                        </CategoryImage1>
+                                        <DetailsCategory1>
+                                            <HeadingBeans1>
                                                 Ethopian Beans
-                                            </HeadingBeans>
-                                            <Paragraph>
+                                            </HeadingBeans1>
+                                            <Paragraph1>
                                                 Selected Coffee Beans with best
                                                 Quality form indonesian
-                                            </Paragraph>
-                                            <Price>$ 35. 00</Price>
-                                        </DetailsCategory>
+                                            </Paragraph1>
+                                            <Price35>$ 35. 00</Price35>
+                                        </DetailsCategory1>
                                     </EthopianBeans>
                                     <ViewButton>view details</ViewButton>
                                 </Category2>
@@ -507,6 +507,9 @@ const LeftBox = styled.div`
     @media all and (max-width: 768px) {
         width: 35%;
     }
+    @media all and (max-width: 640px){
+        width: 20%;
+}
 `;
 const Logo = styled.div`
     margin-right: 40px;
@@ -517,6 +520,9 @@ const Logo = styled.div`
     @media all and (max-width: 768px) {
         width: 50px;
     }
+    @media all and (max-width: 640px){
+        width: 40px;
+}
 `;
 const LogoImage = styled.img`
     width: 100%;
@@ -541,6 +547,9 @@ const SmallHeading = styled.h2`
         font-size: 14px;
         font-weight: 600;
     }
+    @media all and (max-width: 640px){
+        display: none;
+}
 `;
 const BigHeading = styled.h1`
     font-size: 20px;
@@ -584,6 +593,9 @@ const MiddleBox = styled.div`
         width: 40%;
         padding: 10px 20px;
     }
+    @media all and (max-width: 640px){
+        width: 53%;
+}
 `;
 const HeaderForm = styled.form`
     display: flex;
@@ -616,6 +628,9 @@ const RightBox = styled.div`
     @media all and (max-width: 768px) {
         width: 30%;
     }
+    @media all and (max-width: 640px){
+        width: 45%;
+}
 `;
 const ImageNoti = styled.div`
     width: 10%;
@@ -854,15 +869,18 @@ const Items = styled(NavLink)`
     justify-content: space-between;
     &:last-child {
         margin-right: 0;
+        @media all and (max-width: 640px){
+            display: none;
+}
 
-        @media all and (max-width: 980px) {
+        /* @media all and (max-width: 980px) {
             display: none;
         }
-        @media all and (max-width: 768px) {
+        @media all and (max-width: 769px) {
             display: block;
 
             display: flex;
-        }
+        } */
     }
     background: #eeeceb;
     padding: 20px 35px;
@@ -971,6 +989,13 @@ const Categories = styled.div`
         padding: 15px 0;
     }
 `;
+
+
+
+
+
+
+
 const Category1 = styled.div`
     display: flex;
     @media all and (max-width: 980px) {
@@ -981,6 +1006,52 @@ const Category1 = styled.div`
         display: flex;
     }
 `;
+
+const CategoryImage1 = styled.div`
+    width: 50%;
+`;
+const ImageFrame = styled.img`
+    width: 100%;
+    display: block;
+`;
+const DetailsCategory1 = styled.div`
+    padding: 15px;
+    @media all and (max-width: 980px){
+        text-align: center;
+}
+@media all and (max-width: 768px){
+    padding: 5px 15px;
+}
+`;
+const HeadingBeans1 = styled.h2`
+    font-weight: 600;
+    font-size: 18px;
+`;
+const Paragraph1 = styled.p`
+    font-size: 14px;
+    width: 90%;
+    line-height: 25px;
+    margin-bottom: 10px;
+    @media all and (max-width: 1280px){
+        width: 100%;
+}
+@media all and (max-width: 980px){
+    font-size: 13px;
+}
+`;
+const Price35 = styled.h2`
+    font-weight: 600;
+    margin-bottom: 10px;
+`;
+
+
+
+
+
+
+
+
+
 const CategoryImage = styled.div`
     width: 50%;
     background-color: #eeeceb;
@@ -988,7 +1059,7 @@ const CategoryImage = styled.div`
     font-weight: 600;
     border-radius: 50px;
     @media all and (max-width: 768px) {
-        width: 40%;
+        width: 30%;
     }
 `;
 const Image1 = styled.img`
@@ -1008,13 +1079,14 @@ const DetailsCategory = styled.div`
     }
     @media all and (max-width: 768px) {
         width: 50%;
+        margin-top: 25px;
     }
 `;
 const HeadingBeans = styled.h2`
     font-weight: 600;
     font-size: 18px;
     @media all and (max-width: 768px) {
-        font-size: 20px;
+        font-size: 25px;
     }
 `;
 const Paragraph = styled.p`
@@ -1044,8 +1116,16 @@ const Paragraph = styled.p`
 const Price = styled.h3`
     font-weight: 600;
     margin-bottom: 10px;
+    @media all and (max-width: 1380px){
+        margin: 22px 0;
+        font-size: 25px;
+}
     @media all and (max-width: 980px) {
         margin-bottom: 0px;
+    }
+    @media all and (max-width: 768px) {
+        font-size: 25px;
+        margin-bottom: 15px;
     }
 `;
 
@@ -1102,6 +1182,9 @@ const VolumePack = styled.div`
     @media all and (max-width: 1080px) {
         margin-bottom: 25px;
     }
+    @media all and (max-width: 768px){
+        display: none;
+}
 `;
 const PackList = styled.ul`
     display: flex;
@@ -1234,6 +1317,8 @@ const Category3 = styled.div`
         width: 201%;
         margin-top: 15px;
         margin-left: 0px;
+        padding: 10px 15px;
+        
     }
 `;
 
@@ -1260,6 +1345,7 @@ const Category4 = styled.div`
     @media all and (max-width: 768px) {
         width: 201%;
         margin-left: 0px;
+        padding: 10px 15px;
     }
 `;
 const PeruBeans = styled.div`
@@ -1292,6 +1378,7 @@ const Category5 = styled.div`
     @media all and (max-width: 768px) {
         width: 201%;
         margin-left: 0px;
+        padding: 10px 15px;
     }
 `;
 const GuatemalaBeans = styled.div`
@@ -1330,8 +1417,8 @@ const ViewButton = styled.button`
         font-size: 15px;
     }
     @media all and (max-width: 768px) {
-        padding: 20px 50px;
-        font-size: 18px;
+        padding: 25px 60px;
+        font-size: 20px;
     }
 `;
 const RightCategories = styled.div`
@@ -1363,8 +1450,12 @@ const RightContainer = styled.div`
         margin-left: 10px;
         padding: 13px;
     }
+
+    @media all and (max-width: 980px){
+        margin-top: 90px;
+}
     @media all and (max-width: 768px) {
-        margin-top: 50px;
+        margin-top: 90px;
         width: 43%;
         margin-left: 0;
         padding: 28px 10px;
@@ -1485,8 +1576,13 @@ const PeruBeansHeading = styled.h2`
     font-weight: 600;
     font-size: 14px;
     margin-bottom: 15px;
+
+    @media all and (max-width: 1380px) {
+        font-size: 20px;
+    }
     @media all and (max-width: 1280px) {
         margin-bottom: 13px;
+        font-size: 19px;
     }
     @media all and (max-width: 980px) {
         font-size: 20px;
@@ -1508,6 +1604,9 @@ const BeansGram = styled.h3`
 `;
 const PriceHeading = styled.h4`
     font-weight: 600;
+    @media all and (max-width: 1380px) {
+        font-size: 20px;
+    }
     @media all and (max-width: 980px) {
         font-size: 20px;
     }
