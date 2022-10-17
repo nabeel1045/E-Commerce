@@ -4,7 +4,7 @@ import styled from 'styled-components'
 export default function() {
   return (
     <Container>
-        <Head>ഒരു പത്ത് മിനിറ്റ്  ഇപ്പൊ ശെരിയാവും </Head>
+        <Head>Ooopss.....</Head>
     </Container>
   )
 }

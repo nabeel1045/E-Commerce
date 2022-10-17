@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
 function Spotlight() {
+    const [count, setCount] = useState(0);
     return (
         <>
             <HeaderContainer>
@@ -167,7 +168,7 @@ function Spotlight() {
                                     </ImageList>
                                     <ItemsHeading>Tea</ItemsHeading>
                                 </Items>
-                                <Items  exact to={"/cakes"}>
+                                <Items exact to={"/cakes"}>
                                     <ImageList>
                                         <CakesImage
                                             src={
@@ -191,7 +192,7 @@ function Spotlight() {
                                     </ImageList>
                                     <ItemsHeading>Bundles</ItemsHeading>
                                 </Items>
-                                <Items>
+                                <Items exact to={"/snacks"}>
                                     <ImageList>
                                         <SnacksImage
                                             src={
@@ -368,7 +369,11 @@ function Spotlight() {
                             </PriceSection>
                             <SectionCount>
                                 <Count>
-                                    <Minus>
+                                    <Minus
+                                        onClick={() =>
+                                            setCount(() => count - 1)
+                                        }
+                                    >
                                         <CountImage>
                                             <ImageMinus
                                                 src={
@@ -379,8 +384,12 @@ function Spotlight() {
                                             />
                                         </CountImage>
                                     </Minus>
-                                    <Number>2</Number>
-                                    <Plus1>
+                                    <Number>{count}</Number>
+                                    <Plus1
+                                        onClick={() =>
+                                            setCount(() => count + 1)
+                                        }
+                                    >
                                         <CountImage>
                                             <ImagePlus
                                                 src={
@@ -413,8 +422,16 @@ function Spotlight() {
                             </PriceSection>
                             <SectionCount>
                                 <Count>
-                                    <Minus>
-                                        <CountImage>
+                                    <Minus
+                                        onClick={() =>
+                                            setCount(() => count - 1)
+                                        }
+                                    >
+                                        <CountImage
+                                            onClick={() =>
+                                                setCount(() => count - 1)
+                                            }
+                                        >
                                             <ImageMinus
                                                 src={
                                                     require("../Assets/images/minus.svg")
@@ -424,8 +441,12 @@ function Spotlight() {
                                             />
                                         </CountImage>
                                     </Minus>
-                                    <Number>2</Number>
-                                    <Plus1>
+                                    <Number>{count}</Number>
+                                    <Plus1
+                                        onClick={() =>
+                                            setCount(() => count + 1)
+                                        }
+                                    >
                                         <CountImage>
                                             <ImagePlus
                                                 src={
@@ -489,6 +510,9 @@ const Header = styled.div`
     }
     @media all and (max-width: 980px) {
         height: 90px;
+    }
+    @media all and (max-width: 480px) {
+        height: 70px;
     }
 `;
 
@@ -595,6 +619,9 @@ const MiddleBox = styled.div`
     }
     @media all and (max-width: 640px) {
         width: 53%;
+    }
+    @media all and (max-width: 480px) {
+        display: none;
     }
 `;
 const HeaderForm = styled.form`
@@ -748,6 +775,10 @@ const SpotlightContainer = styled.div`
 `;
 const MainContainer = styled.div`
     display: flex;
+    @media all and (max-width: 480px) {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 `;
 
 // LeftContainer start
@@ -855,6 +886,9 @@ const MiddleContainer = styled.div`
     @media all and (max-width: 768px) {
         width: 50%;
     }
+    @media all and (max-width: 480px) {
+        width: 90%;
+    }
 `;
 const MiddleMenuIcons = styled.div`
     display: flex;
@@ -951,6 +985,7 @@ const MiddleCategories = styled.div`
         flex-wrap: wrap;
         width: 100%;
         justify-content: center;
+        padding-left: 10px;
     }
 `;
 
@@ -990,14 +1025,18 @@ const MainHeading = styled.h1`
     @media all and (max-width: 640px) {
         text-align: center;
     }
+    @media all and (max-width: 480px) {
+        margin-top: 0px;
+        margin-bottom: 20px;
+    }
 `;
 const Categories = styled.div`
     background-color: #eeeceb;
     border-radius: 20px;
     padding: 30px 0;
-    @media all and (max-width: 1080px){
+    @media all and (max-width: 1080px) {
         padding: 15px 0;
-}
+    }
     @media all and (max-width: 980px) {
         padding: 15px 0;
     }
@@ -1063,6 +1102,9 @@ const CategoryImage = styled.div`
     @media all and (max-width: 768px) {
         width: 30%;
     }
+    @media all and (max-width: 480px) {
+        width: 50%;
+    }
 `;
 const Image1 = styled.img`
     width: 100%;
@@ -1087,12 +1129,18 @@ const DetailsCategory = styled.div`
         width: 65%;
         margin-top: 0px;
     }
+    @media all and (max-width: 480px) {
+        width: 100%;
+    }
 `;
 const HeadingBeans = styled.h2`
     font-weight: 600;
     font-size: 18px;
     @media all and (max-width: 768px) {
         font-size: 25px;
+    }
+    @media all and (max-width: 480px) {
+        font-size: 19px;
     }
 `;
 const Paragraph = styled.p`
@@ -1117,6 +1165,9 @@ const Paragraph = styled.p`
     @media all and (max-width: 768px) {
         width: 100%;
         font-size: 16px;
+    }
+    @media all and (max-width: 480px) {
+        font-size: 13px;
     }
 `;
 const Price = styled.h3`
@@ -1334,6 +1385,12 @@ const Category3 = styled.div`
         margin-left: 0px;
         padding: 10px 15px;
     }
+    @media all and (max-width: 480px) {
+        width: 100%;
+        margin-top: 15px;
+        margin-left: 0px;
+        padding: 10px 15px;
+    }
 `;
 
 // Category3 done
@@ -1358,6 +1415,11 @@ const Category4 = styled.div`
     }
     @media all and (max-width: 768px) {
         width: 201%;
+        margin-left: 0px;
+        padding: 10px 15px;
+    }
+    @media all and (max-width: 480px) {
+        width: 100%;
         margin-left: 0px;
         padding: 10px 15px;
     }
@@ -1391,6 +1453,11 @@ const Category5 = styled.div`
     }
     @media all and (max-width: 768px) {
         width: 201%;
+        margin-left: 0px;
+        padding: 10px 15px;
+    }
+    @media all and (max-width: 480px) {
+        width: 100%;
         margin-left: 0px;
         padding: 10px 15px;
     }
@@ -1439,6 +1506,10 @@ const ViewButton = styled.button`
         padding: 15px 23px;
         font-size: 16px;
     }
+    @media all and (max-width: 480px) {
+        padding: 15px 50px;
+        font-size: 16px;
+    }
 `;
 const RightCategories = styled.div`
     width: 47%;
@@ -1469,9 +1540,9 @@ const RightContainer = styled.div`
         margin-left: 10px;
         padding: 13px;
     }
-    @media all and (max-width: 1080px){
+    @media all and (max-width: 1080px) {
         padding: 45px 13px;
-}
+    }
 
     @media all and (max-width: 980px) {
         margin-top: 90px;
@@ -1484,6 +1555,11 @@ const RightContainer = styled.div`
     }
     @media all and (max-width: 640px) {
         margin-top: 55px;
+    }
+    @media all and (max-width: 480px) {
+        width: 78%;
+        margin-top: 10px;
+        margin-left: 33px;
     }
 `;
 
@@ -1523,6 +1599,9 @@ const HeadingOrder = styled.h1`
 
 const Delivery = styled.ul`
     display: flex;
+    @media all and (max-width: 480px) {
+        justify-content: center;
+    }
 `;
 const Item = styled.li`
     background-color: #d5d2d1;
@@ -1562,6 +1641,9 @@ const Item = styled.li`
         }
         font-size: 16px;
         padding: 12px 13px;
+    }
+    @media all and (max-width: 480px) {
+        margin-right: 15px;
     }
 `;
 const SectionDelivery = styled.div``;
@@ -1625,9 +1707,9 @@ const PeruBeansHeading = styled.h2`
         margin-bottom: 13px;
         font-size: 19px;
     }
-    @media all and (max-width: 1080px){
+    @media all and (max-width: 1080px) {
         font-size: 17px;
-}
+    }
     @media all and (max-width: 980px) {
         font-size: 20px;
     }
@@ -1674,6 +1756,9 @@ const SectionCount = styled.div`
     @media all and (max-width: 640px) {
         margin-left: 12px;
     }
+    @media all and (max-width: 480px) {
+        justify-content: center;
+    }
 `;
 
 const Count = styled.ul`
@@ -1702,8 +1787,16 @@ const Minus = styled.li`
         margin-right: 30px;
         padding: 16px 8px;
     }
+    @media all and (max-width: 480px) {
+        margin-right: 30px;
+        padding: 11px 4px;
+    }
 `;
-const CountImage = styled.div``;
+const CountImage = styled.div`
+    @media all and (max-width: 480px) {
+        width: 17px;
+    }
+`;
 const ImageMinus = styled.img`
     display: block;
     width: 100%;
@@ -1725,6 +1818,9 @@ const Plus1 = styled.li`
     }
     @media all and (max-width: 980px) {
         margin-left: 30px;
+    }
+    @media all and (max-width: 480px) {
+        padding: 3px;
     }
 `;
 
@@ -1866,5 +1962,9 @@ const CheckOutButton = styled.button`
     @media all and (max-width: 640px) {
         font-size: 17px;
         padding: 15px 30px;
+    }
+    @media all and (max-width: 480px) {
+        font-size: 16px;
+        padding: 15px 60px;
     }
 `;
