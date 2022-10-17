@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
-import Snacks from "./components/Assets/images/Snacks";
+import Snacks from "./components/screens/Snacks";
 import Preloader from "../src/components/Loader/Preloader";
 import Cakes from "./components/screens/Cakes";
 import Coffee from "./components/screens/Coffee";
