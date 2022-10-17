@@ -155,7 +155,7 @@ function Spotlight() {
                                     </ImageList>
                                     <ItemsHeading>Coffee</ItemsHeading>
                                 </Items>
-                                <Items>
+                                <Items exact to={"/tea"}>
                                     <ImageList>
                                         <Tea2Image
                                             src={
@@ -167,7 +167,7 @@ function Spotlight() {
                                     </ImageList>
                                     <ItemsHeading>Tea</ItemsHeading>
                                 </Items>
-                                <Items>
+                                <Items  exact to={"/cakes"}>
                                     <ImageList>
                                         <CakesImage
                                             src={
@@ -507,9 +507,9 @@ const LeftBox = styled.div`
     @media all and (max-width: 768px) {
         width: 35%;
     }
-    @media all and (max-width: 640px){
+    @media all and (max-width: 640px) {
         width: 20%;
-}
+    }
 `;
 const Logo = styled.div`
     margin-right: 40px;
@@ -520,9 +520,9 @@ const Logo = styled.div`
     @media all and (max-width: 768px) {
         width: 50px;
     }
-    @media all and (max-width: 640px){
+    @media all and (max-width: 640px) {
         width: 40px;
-}
+    }
 `;
 const LogoImage = styled.img`
     width: 100%;
@@ -547,9 +547,9 @@ const SmallHeading = styled.h2`
         font-size: 14px;
         font-weight: 600;
     }
-    @media all and (max-width: 640px){
+    @media all and (max-width: 640px) {
         display: none;
-}
+    }
 `;
 const BigHeading = styled.h1`
     font-size: 20px;
@@ -593,9 +593,9 @@ const MiddleBox = styled.div`
         width: 40%;
         padding: 10px 20px;
     }
-    @media all and (max-width: 640px){
+    @media all and (max-width: 640px) {
         width: 53%;
-}
+    }
 `;
 const HeaderForm = styled.form`
     display: flex;
@@ -628,9 +628,9 @@ const RightBox = styled.div`
     @media all and (max-width: 768px) {
         width: 30%;
     }
-    @media all and (max-width: 640px){
+    @media all and (max-width: 640px) {
         width: 45%;
-}
+    }
 `;
 const ImageNoti = styled.div`
     width: 10%;
@@ -764,6 +764,9 @@ const IconMenu = styled.div`
     @media all and (max-width: 980px) {
         width: 30px;
     }
+    @media all and (max-width: 640px) {
+        width: 25px;
+    }
 `;
 const MenuImage = styled.img`
     width: 100%;
@@ -863,15 +866,15 @@ const ListItems = styled.ul`
     justify-content: space-between;
 `;
 const Items = styled(NavLink)`
-    margin-right: 25px;
+    margin-right: 15px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     &:last-child {
         margin-right: 0;
-        @media all and (max-width: 640px){
+        @media all and (max-width: 640px) {
             display: none;
-}
+        }
 
         /* @media all and (max-width: 980px) {
             display: none;
@@ -883,7 +886,7 @@ const Items = styled(NavLink)`
         } */
     }
     background: #eeeceb;
-    padding: 20px 35px;
+    padding: 18px 25px;
     border-radius: 45px;
     &:hover {
         background-color: #ff7b00;
@@ -908,6 +911,10 @@ const Items = styled(NavLink)`
     @media all and (max-width: 768px) {
         margin-right: 18px;
     }
+    @media all and (max-width: 640px) {
+        margin-right: 14px;
+        display: none;
+    }
 `;
 const ImageList = styled.div`
     background: #fff;
@@ -929,7 +936,7 @@ const Tea2Image = styled.img``;
 const CakesImage = styled.img``;
 const BottleImage = styled.img``;
 const SnacksImage = styled.img``;
-const ItemsHeading = styled(NavLink)`
+const ItemsHeading = styled.h2`
     font-size: 15px;
     margin-left: 13px;
     @media all and (max-width: 1380px) {
@@ -980,21 +987,21 @@ const MainHeading = styled.h1`
         margin-top: 10px;
         margin-bottom: 20px;
     }
+    @media all and (max-width: 640px) {
+        text-align: center;
+    }
 `;
 const Categories = styled.div`
     background-color: #eeeceb;
     border-radius: 20px;
     padding: 30px 0;
+    @media all and (max-width: 1080px){
+        padding: 15px 0;
+}
     @media all and (max-width: 980px) {
         padding: 15px 0;
     }
 `;
-
-
-
-
-
-
 
 const Category1 = styled.div`
     display: flex;
@@ -1016,41 +1023,36 @@ const ImageFrame = styled.img`
 `;
 const DetailsCategory1 = styled.div`
     padding: 15px;
-    @media all and (max-width: 980px){
+    @media all and (max-width: 980px) {
         text-align: center;
-}
-@media all and (max-width: 768px){
-    padding: 5px 15px;
-}
+    }
+    @media all and (max-width: 768px) {
+        padding: 5px 15px;
+    }
 `;
 const HeadingBeans1 = styled.h2`
     font-weight: 600;
     font-size: 18px;
+    @media all and (max-width: 640px) {
+        font-size: 19px;
+    }
 `;
 const Paragraph1 = styled.p`
     font-size: 14px;
     width: 90%;
     line-height: 25px;
     margin-bottom: 10px;
-    @media all and (max-width: 1280px){
+    @media all and (max-width: 1280px) {
         width: 100%;
-}
-@media all and (max-width: 980px){
-    font-size: 13px;
-}
+    }
+    @media all and (max-width: 980px) {
+        font-size: 13px;
+    }
 `;
 const Price35 = styled.h2`
     font-weight: 600;
     margin-bottom: 10px;
 `;
-
-
-
-
-
-
-
-
 
 const CategoryImage = styled.div`
     width: 50%;
@@ -1080,6 +1082,10 @@ const DetailsCategory = styled.div`
     @media all and (max-width: 768px) {
         width: 50%;
         margin-top: 25px;
+    }
+    @media all and (max-width: 640px) {
+        width: 65%;
+        margin-top: 0px;
     }
 `;
 const HeadingBeans = styled.h2`
@@ -1116,10 +1122,10 @@ const Paragraph = styled.p`
 const Price = styled.h3`
     font-weight: 600;
     margin-bottom: 10px;
-    @media all and (max-width: 1380px){
+    @media all and (max-width: 1380px) {
         margin: 22px 0;
         font-size: 25px;
-}
+    }
     @media all and (max-width: 980px) {
         margin-bottom: 0px;
     }
@@ -1174,6 +1180,11 @@ const Percentage = styled.li`
         font-size: 15px;
         margin-right: 10px;
     }
+    @media all and (max-width: 640px) {
+        &:last-child {
+            display: none;
+        }
+    }
 `;
 const VolumePack = styled.div`
     padding-left: 10px;
@@ -1182,9 +1193,9 @@ const VolumePack = styled.div`
     @media all and (max-width: 1080px) {
         margin-bottom: 25px;
     }
-    @media all and (max-width: 768px){
+    @media all and (max-width: 768px) {
         display: none;
-}
+    }
 `;
 const PackList = styled.ul`
     display: flex;
@@ -1258,6 +1269,10 @@ const Button = styled.button`
         padding: 15px 55px;
         font-size: 18px;
     }
+    @media all and (max-width: 640px) {
+        padding: 12px 37px;
+        font-size: 16px;
+    }
 `;
 
 // Category2 start
@@ -1318,7 +1333,6 @@ const Category3 = styled.div`
         margin-top: 15px;
         margin-left: 0px;
         padding: 10px 15px;
-        
     }
 `;
 
@@ -1392,10 +1406,11 @@ const GuatemalaBeans = styled.div`
 const ViewButton = styled.button`
     display: block;
     margin: 0 auto;
-    background-color: #e5e0de;
+    background-color: #d5d2d1;
     padding: 19px 110px;
     border-radius: 35px;
     font-size: 20px;
+    background-color: #d5d2d1;
     color: #000;
     &:hover {
         background-color: #ff7b00;
@@ -1419,6 +1434,10 @@ const ViewButton = styled.button`
     @media all and (max-width: 768px) {
         padding: 25px 60px;
         font-size: 20px;
+    }
+    @media all and (max-width: 640px) {
+        padding: 15px 23px;
+        font-size: 16px;
     }
 `;
 const RightCategories = styled.div`
@@ -1450,15 +1469,21 @@ const RightContainer = styled.div`
         margin-left: 10px;
         padding: 13px;
     }
-
-    @media all and (max-width: 980px){
-        margin-top: 90px;
+    @media all and (max-width: 1080px){
+        padding: 45px 13px;
 }
+
+    @media all and (max-width: 980px) {
+        margin-top: 90px;
+    }
     @media all and (max-width: 768px) {
         margin-top: 90px;
         width: 43%;
         margin-left: 0;
         padding: 28px 10px;
+    }
+    @media all and (max-width: 640px) {
+        margin-top: 55px;
     }
 `;
 
@@ -1512,7 +1537,7 @@ const Item = styled.li`
         background-color: #21282c;
         color: #f6f5f4;
     }
-    &:nth-child(2) {
+    &:nth-child(3) {
         background-color: #21282c;
         color: #f6f5f4;
     }
@@ -1531,6 +1556,13 @@ const Item = styled.li`
         padding: 12px 8px;
         margin-right: 5px;
     }
+    @media all and (max-width: 640px) {
+        &:nth-child(2) {
+            display: none;
+        }
+        font-size: 16px;
+        padding: 12px 13px;
+    }
 `;
 const SectionDelivery = styled.div``;
 const CartSection = styled.div`
@@ -1546,6 +1578,8 @@ const CartSection = styled.div`
     @media all and (max-width: 768px) {
         margin-top: 20px;
     }
+    @media all and (max-width: 640px) {
+    }
 `;
 const PriceSection = styled.div`
     display: flex;
@@ -1558,11 +1592,18 @@ const PriceSection = styled.div`
     @media all and (max-width: 980px) {
         width: 100%;
     }
+    @media all and (max-width: 640px) {
+        justify-content: center;
+        text-align: center;
+    }
 `;
 const CartImage = styled.div`
     width: 60%;
     @media all and (max-width: 980px) {
         width: 70%;
+    }
+    @media all and (max-width: 640px) {
+        display: none;
     }
 `;
 const PeruBeansImage = styled.img`
@@ -1574,7 +1615,7 @@ const AddCart = styled.div`
 `;
 const PeruBeansHeading = styled.h2`
     font-weight: 600;
-    font-size: 14px;
+    font-size: 18px;
     margin-bottom: 15px;
 
     @media all and (max-width: 1380px) {
@@ -1584,8 +1625,15 @@ const PeruBeansHeading = styled.h2`
         margin-bottom: 13px;
         font-size: 19px;
     }
+    @media all and (max-width: 1080px){
+        font-size: 17px;
+}
     @media all and (max-width: 980px) {
         font-size: 20px;
+    }
+
+    @media all and (max-width: 640px) {
+        font-size: 16px;
     }
 `;
 const BeansGram = styled.h3`
@@ -1622,6 +1670,9 @@ const SectionCount = styled.div`
     @media all and (max-width: 980px) {
         margin-bottom: 0px;
         width: 100%;
+    }
+    @media all and (max-width: 640px) {
+        margin-left: 12px;
     }
 `;
 
@@ -1744,6 +1795,9 @@ const PaymentMood = styled.ul`
     @media all and (max-width: 768px) {
         margin-bottom: 25px;
     }
+    @media all and (max-width: 640px) {
+        display: none;
+    }
 `;
 const HeadingPyment = styled.h6`
     font-size: 15px;
@@ -1808,5 +1862,9 @@ const CheckOutButton = styled.button`
     }
     @media all and (max-width: 768px) {
         font-size: 18px;
+    }
+    @media all and (max-width: 640px) {
+        font-size: 17px;
+        padding: 15px 30px;
     }
 `;
