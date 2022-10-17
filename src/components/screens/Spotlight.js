@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
+import {Helmet } from "react-helmet"
 
 function Spotlight() {
     const [count, setCount] = useState(0);
     return (
         <>
+        <Helmet>
+            <title>E-Commerce</title>
+        </Helmet>
             <HeaderContainer>
                 <Header>
                     <LeftBox>
@@ -90,7 +94,7 @@ function Spotlight() {
             <SpotlightContainer>
                 <MainContainer>
                     <LeftContainer>
-                        <IconMenu>
+                        <IconMenu exact to={"/menu"}> 
                             <MenuImage
                                 src={
                                     require("../Assets/images/menu.svg").default
@@ -785,9 +789,10 @@ const MainContainer = styled.div`
 const LeftContainer = styled.div`
     width: 7%;
 `;
-const IconMenu = styled.div`
+const IconMenu = styled(NavLink)`
     width: 40px;
     margin-bottom: 30px;
+    display: inline-block;
 
     @media all and (max-width: 1280px) {
         width: 35px;
@@ -1235,6 +1240,15 @@ const Percentage = styled.li`
         &:last-child {
             display: none;
         }
+    }
+    @media all and (max-width: 480px) {
+        padding: 11px 18px;
+        font-size: 17px;
+        margin-right: 10px;
+    }
+    @media all and (max-width: 360px) {
+        padding: 11px 16px;
+        font-size: 15px;
     }
 `;
 const VolumePack = styled.div`
@@ -1891,9 +1905,7 @@ const PaymentMood = styled.ul`
     @media all and (max-width: 768px) {
         margin-bottom: 25px;
     }
-    @media all and (max-width: 640px) {
-        display: none;
-    }
+   
 `;
 const HeadingPyment = styled.h6`
     font-size: 15px;
@@ -1932,6 +1944,11 @@ const Cash = styled.li`
     @media all and (max-width: 980px) {
         margin-right: 11px;
         padding: 15px 9px;
+    }
+    @media all and (max-width: 640px) {
+        margin-right: 13px;
+    padding: 13px 9px;
+    font-size: 10px;
     }
 `;
 const CheckOutButton = styled.button`
